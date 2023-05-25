@@ -1,0 +1,10 @@
+/* AnnaG: added styling to change the backgtround image from */
+.content1 {
+    background-image: url('../images/dark.png');
+    background-color: red;
+  }
+  .content1.active {
+    background-image: url('../images/light.png');
+    background-color: green;
+  }
+  /* ___________________________________________________ */
