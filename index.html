@@ -42,19 +42,17 @@
   </div>
   <!-- Aleena: Added Search bar and dropdown List -->
   <div id="search" class="row">
-    <form id=searchForm class="col-lg-6 col-sm-12">
-      <input id=cityInput class="mr-sm-2" type="search" placeholder="Search by artists, events, or city"
+    <form id=searchForm class="col-lg-4 col-sm-12">
+      <input id=cityInput type="search" placeholder="Search by artists, events, or city"
         aria-label="Search">
-      <button class="btn btn-light dropdown-toggle custom-dropdown" type="button" data-bs-toggle="dropdown"
-        aria-expanded="false">
-        Categories
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Music</a></li>
-        <li><a class="dropdown-item" href="#">Sports</a></li>
-        <li><a class="dropdown-item" href="#">Show</a></li>
-      </ul>
+      <select id="category-input" class="form-input w-30">
+        <option value="" disabled selected>Categories</option>
+        <option value="Music">Music</option>
+        <option value="Sports">Sports</option>
+        <option value="Show">Show</option>
+      </select>
     </form>
+    <button id="searchButton" class="btn btn-outline-light my-2 my-sm-0 col-1" type="submit">Search</button>
   </div>
 
   <!-- Suzy: Add footer with Gigs logo, copyright, contact and support links -->
