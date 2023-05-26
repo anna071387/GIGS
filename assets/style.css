@@ -1,10 +1,22 @@
+
+:root {
+    --primary: #7A29FD;
+    --secondary: #707070;
+    --white: #FFFFFF;
+    --black: #000000;
+  }
+
+nav.button {
+    border: none;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
 .background-img {
     height: 100vh;
-    background-image: url(../assets/images/gigs_background.png);
+    background-image: url(../assets/Images/DarkBG.jpg);
     background-size: cover;
 }
 
