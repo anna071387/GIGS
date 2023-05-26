@@ -40,6 +40,14 @@ $(document).ready(function () {
 });
 
 
+// AnnaG: added a todays date that can be displayed at the navbar?
+$(document).ready(function () {
+    // Added Current day with Dayjs 
+      var today = dayjs();
+      $('#date').text(today.format('MMM D, YYYY'));
+      console.log(today);
+});
+
 
 // AnnaG: added a click button to change the background image from Dark image to light image
 $(document).ready(function() {
@@ -47,5 +55,8 @@ $(document).ready(function() {
       $(".content1").toggleClass("active");
     });
   });
+
+
+
 
 
