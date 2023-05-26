@@ -1,0 +1,34 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.background-img {
+    height: 100vh;
+    background-image: url(../assets/images/gigs_background.png);
+    background-size: cover;
+}
+
+.saved-link {
+    font-weight: 500px;
+    font-size: 20px;
+}
+
+/* Remove underline from link */
+.saved-link a {
+    text-decoration: none;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    background-color: black;
+    color: white;
+    column-gap: 50px;
+}
+
+.footer-logo {
+    width: 100px;
+}
