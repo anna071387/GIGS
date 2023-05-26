@@ -31,7 +31,7 @@ body {
 #searchForm {
     position: fixed;
     top: 50%;
-    left: 30%;
+    left: 38%;
     margin-top: -50px;
     margin-left: -100px;
     background-color: #FFFFFF;
@@ -40,17 +40,28 @@ body {
 input {
     float: left;
     width: 80%;
-    border: none;
     padding-top: 5px;
+    border-radius: 0%;
+    border-left: none;
+    border-top:none;
+    border-bottom: none;
 }
 
-.custom-dropdown {
+#category-input {
     float: right;
-    border-left: var(--secondary);
-    border-style: solid;
-    border-width: 0.5px;
-    border-radius: 0%;
-    width: 20%;
+    margin-top: 5px;
+    margin-right: 20px;
+    border:none;
+    color:var(--secondary)
+}
+
+#searchButton{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+    
 }
 
 .saved-link {
