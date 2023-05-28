@@ -5,10 +5,6 @@
     --black: #000000;
 }
 
-nav.button {
-    border: none;
-}
-
 a {
     color: var(--primary)
 }
