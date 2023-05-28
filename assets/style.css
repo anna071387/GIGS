@@ -3,7 +3,15 @@
     --secondary: #707070;
     --white: #FFFFFF;
     --black: #000000;
-  }
+}
+
+nav.button {
+    border: none;
+}
+
+a {
+    color: var(--primary)
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -11,13 +19,54 @@ body {
 
 .background-img {
     height: 100vh;
-    background-image: url(../assets/images/gigs_background.png);
+    background-image: url(../assets/Images/DarkBG.jpg);
     background-size: cover;
 }
 
 /* Override bootstrap css */
 .navbar-expand-lg {
     justify-content: space-between;
+}
+
+#search {
+    display: flex;
+
+}
+
+#searchForm {
+    position: fixed;
+    top: 50%;
+    left: 38%;
+    margin-top: -50px;
+    margin-left: -100px;
+    background-color: #FFFFFF;
+}
+
+input {
+    float: left;
+    width: 80%;
+    padding-top: 5px;
+    border-radius: 0%;
+    border-left: none;
+    border-top:none;
+    border-bottom: none;
+}
+
+#category-input {
+    float: right;
+    margin-top: 5px;
+    margin-right: 20px;
+    border:none;
+    color:var(--secondary)
+}
+
+#searchButton{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+    
 }
 
 .saved-link {
