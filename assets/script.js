@@ -6,16 +6,11 @@ var seatGeekURL = `https://api.seatgeek.com/2/venues?client_id=MzM4NjkxMjN8MTY4N
 //declare weather API and searchButton 
 var searchButtonEl = document.getElementById("searchButton");
 var weatherURL = 'http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=14cbe9a851348e71f4881cd59afa5e76'
-
+//Aleena - redirect to results.hml (needs to work on functionality)
 searchButton.addEventListener("click",function(event){
-  fetch(seatGeekURL)
-      .then(function(response){
-          return response.json();
-      })
-      .then(function(data){
-          console.log(data)
-      })
-  });
+  event.preventDefault();
+  location.replace("./results.html")
+})
 
 
 //weather API
