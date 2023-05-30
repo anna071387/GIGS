@@ -40,20 +40,10 @@ body {
 
 input {
     float: left;
-    width: 80%;
+    width: 100%;
     padding-top: 5px;
     border-radius: 0%;
-    border-left: none;
-    border-top:none;
-    border-bottom: none;
-}
-
-#category-input {
-    float: right;
-    margin-top: 5px;
-    margin-right: 20px;
-    border:none;
-    color:var(--secondary)
+    border: none;
 }
 
 #searchButton{
