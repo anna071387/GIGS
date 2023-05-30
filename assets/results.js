@@ -14,10 +14,19 @@ fetch(seatGeekURL)
 })
 
 
-function toggle() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
+const slider = document.querySelector('.slider')
+const body = document.querySelector('body')
+
+slider.addEventListener('mousedown', BgChange)
+
+
+function BgChange() {
+    body.style = `background: url(./images/LightBG_small.jpg)no-repeat center center cover`
 }
+// function toggle() {
+//    var element = document.body;
+//    element.classList.toggle("dark-mode");
+// }
 
 
 }
