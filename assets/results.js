@@ -13,7 +13,7 @@ fetch(seatGeekURL+"&city="+cities)
 
 })
 
-
+// Anna: Added switch on toggle button to switch the background
 const slider = document.querySelector('.slider')
 const body = document.querySelector('body')
 
@@ -21,13 +21,15 @@ slider.addEventListener('mousedown', BgChange)
 
 
 function BgChange() {
-    body.style = `background: url(./images/LightBG_small.jpg)no-repeat center center cover`
+    body.style = `background: url(./images/Gigs_LOGO.png) no-repeat center center/cover`
 }
-// function toggle() {
-//    var element = document.body;
-//    element.classList.toggle("dark-mode");
-// }
 
 
+//Anna - redirect to index.hml
+var backBtn = document.getElementById("backBtn");
+backBtn.addEventListener("click",function(event){
+  event.preventDefault();
+  location.replace("./index.html")
+});
 }
 

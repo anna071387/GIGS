@@ -30,27 +30,58 @@ body {
   padding-left: 25px;
 }
 
-a {
+/* a {
   color: var(--primary)
+} */
+
+/* Anna Added toggle and back button to index html 
+It will be closed at the end with note \Toggle see further */
+a {
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 7px ;
+  padding: 10px 8px 16px 7px;
 }
 
+a:hover {
+  background-color: #bf9bfa;
+  color: black;
+}
+.square {
+  background :#7A29FD;
+  /* border-radius: 50%; */
+  color: #000000;
+  padding-top: 0px;
+  height: 34px;
+  gap: 5px;
+}
+.squeareColor {
 
+  background :#7A29FD;
+  color: #000000;
+}
+/* img {
+  size:95%;
+
+} */
+.toggle{
+  padding-left:50px;
+}
 /* switch toggle button */
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
+  width: 112px;
   height: 34px;
- 
 }
 .switch input { 
   opacity: 0;
   width: 0;
   height: 0;
-
 }
 
 .slider {
+  display: inline;
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -66,13 +97,12 @@ a {
   position: absolute;
   content: "";
   height: 26px;
-  width: 26px;
+  width: 78px;
   left: 4px;
   bottom: 4px;
   background-color: #f2ecfc;
   -webkit-transition: .4s;
   transition: .4s;
-  
 }
 
 input:checked + .slider {
@@ -85,7 +115,8 @@ input:checked + .slider:before {
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
-/* Switch toggle button finished */
+/* \Toggle
+Switch toggle button  abd back button finished */
 
 .support {
   color: #f2ecfc;
