@@ -1,10 +1,18 @@
 // declare seatGeek API and search button El
 var searchButtonEl = document.getElementById("searchButton");
-var seatGeekURL = `https://api.seatgeek.com/2/venues?client_id=MzM4NjkxMjN8MTY4NDgwNzIxOS45Nzg3Mjgz`
+var seatGeekURL = `https://api.seatgeek.com/2/venues?client_id=MzM4NjkxMjN8MTY4NDgwNzIxOS45Nzg3Mjgz`;
 var cityInputEl = document.getElementById("cityInput");
 
 
 //declare weather API and searchButton 
+// Anna-added back ticks ` instead of ' to do template literal
+var weatherURL = `http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=14cbe9a851348e71f4881cd59afa5e76`;
+
+
+
+//Aleena - redirect to results.hml (needs to work on functionality,
+//  Anna: added "El" to searchButton(El))
+// WORKS
 var searchButtonEl = document.getElementById("searchButton");
 var weatherURL = 'http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=14cbe9a851348e71f4881cd59afa5e76'
 
@@ -18,7 +26,7 @@ searchButton.addEventListener("click",function(event){
 
 
 //weather API
-searchButton.addEventListener("click",function(event){
+searchButtonEl.addEventListener("click",function(event){
     fetch(weatherURL)
     .then(function(response){
         return response.json();
@@ -30,29 +38,13 @@ searchButton.addEventListener("click",function(event){
 });
 
 
-// AnnaG: added a todays date that can be displayed at the navbar?
+// AnnaG: added a todays date that can be displayed at the navbar in the center
+// WORKS!
 $(document).ready(function () {
     // Added Current day with Dayjs 
-      var today = dayjs();
-      $('#date').text(today.format('MMM D, YYYY'));
-      console.log(today);
-});
-
-
-// AnnaG: added a todays date that can be displayed at the navbar?
-$(document).ready(function () {
-    // Added Current day with Dayjs 
-      var today = dayjs();
-      $('#date').text(today.format('MMM D, YYYY'));
-      console.log(today);
-});
-
-
-// AnnaG: added a click button to change the background image from Dark image to light image
-$(document).ready(function() {
-    $("button").click(function() {
-      $(".content1").toggleClass("active");
-    });
+    var today = dayjs();
+    $('#1a').text(today.format('MMM D, YYYY'));
+    console.log(today);
   });
 
 
