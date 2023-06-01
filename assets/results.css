@@ -21,6 +21,19 @@ body {
   margin:0;
 }
 
+/* Suzy: Add css for weather div to display icon and temp on top right */
+.weather {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+#temp {
+  display: block;
+  font-size: 15px;
+  color: white;
+}
+
 .search-results {
   display: flex;
   padding: 25px;
