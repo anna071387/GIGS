@@ -14,7 +14,7 @@ var weatherURL = `http://api.openweathermap.org/data/2.5/weather?q=London,uk&APP
 //  Anna: added "El" to searchButton(El))
 // WORKS
 var searchButtonEl = document.getElementById("searchButton");
-var weatherURL = 'http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=14cbe9a851348e71f4881cd59afa5e76'
+
 
 
 //Aleena - redirect to results.html when search button is clicked
@@ -25,17 +25,16 @@ searchButton.addEventListener("click",function(event){
 })
 
 
-//weather API
-searchButtonEl.addEventListener("click",function(event){
+//weather API Mike
+
     fetch(weatherURL)
     .then(function(response){
         return response.json();
     })
     .then(function(data){
         console.log(data)
-    })
+    });
 
-});
 
 
 // AnnaG: added a todays date that can be displayed at the navbar in the center
