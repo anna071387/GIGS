@@ -27,7 +27,8 @@
     <!-- Suzy: Add navbar with Gigs logo image and Saved link -->
     <div id="header" class="container-fluid">
       <nav class="navbar navbar-expand-lg navbar-light">
-        <h1><img src="./assets/images/Gigs_LOGO.png" alt="GIGS logo" class="logo"></h1>
+        <!-- Suzy: Add <a> tag with href attribute so logo can be clicked to navigate to homepage  -->
+        <h1><a href="index.html"><img src="./assets/images/Gigs_LOGO.png" alt="GIGS logo" class="logo"></a></h1>
 
         <p id="1a" class="answer" style="font-size:36px"></p>
         
@@ -35,8 +36,8 @@
         <!-- Suzy: Remove container-fluid class -->
         <form class="justify-content-end">
           <div class="saved-link"><i class="fa fa-heart-o" aria-hidden="true"></i>
-            <!-- Suzy: Add results page placeholder and link when saved is clicked -->
-            <a href="/results.html">SAVED</a>
+            <!-- Suzy: Change href attribute to target saved html file when saved link is clicked -->
+            <a href="/saved.html">SAVED</a>
           </div>
         </form>
       </nav>

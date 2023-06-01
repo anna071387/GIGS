@@ -43,10 +43,11 @@ a {
   padding: 10px 8px 16px 7px;
 }
 
-a:hover {
+/* Suzy: Comment out to prevent highlighting of logo when clicked which is to replace need for back button? */
+/* a:hover {
   background-color: #bf9bfa;
   color: black;
-}
+} */
 .square {
   background :#7A29FD;
   /* border-radius: 50%; */
