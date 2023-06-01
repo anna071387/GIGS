@@ -1,6 +1,7 @@
 // Aleena: declare variables
 var seatGeekURL = `https://api.seatgeek.com/2/venues?client_id=MzM4NjkxMjN8MTY4NDgwNzIxOS45Nzg3Mjgz&per_page=5&range=50mi`
-
+var tableEl = document.getElementById("test");
+var weatherIconEl = document.getElementById("weather-icon")
 // Aleena: fetch when the page is loaded
 window.onload = function(){
 var cities = localStorage.getItem("cities");
@@ -11,13 +12,26 @@ fetch(seatGeekURL+"&city="+cities)
 .then(function(data){
     console.log(data)
  
-    for(var i = 0; i < data.list.length; i++){
-        console.log(data.list[i]);
-        var address = document.createElement(h2);
-        address.textContent=data.list[i].venues.city}
-    
-
+    for(var i = 0; i < data.venues.length; i++){
+        console.log(data.venues[i]);
+        var address = document.createElement("h2");
+        address.textContent=data.venues[i].name;
+  tableEl.appendChild(address)
+    } 
+   getWeather(cities) 
 })
+
+function getWeather(cities){
+var weatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${cities}&APPID=14cbe9a851348e71f4881cd59afa5e76`;
+fetch(weatherURL)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data)
+weatherIconEl.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`)
+    })};
+
 
 // Anna: Added switch on toggle button to switch the background
 const slider = document.querySelector('.slider')
@@ -38,4 +52,6 @@ backBtn.addEventListener("click",function(event){
   location.replace("./index.html")
 });
 }
+
+
 
