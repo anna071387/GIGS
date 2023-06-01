@@ -140,6 +140,10 @@ Switch toggle button  abd back button finished */
   background-color: black;
   color: #f2ecfc;
   column-gap: 50px;
+  /* Suzy: Add css to position footer to bottom of the page */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-logo {
