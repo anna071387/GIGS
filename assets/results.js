@@ -1,7 +1,9 @@
 // Aleena: declare variables
 var seatGeekURL = `https://api.seatgeek.com/2/venues?client_id=MzM4NjkxMjN8MTY4NDgwNzIxOS45Nzg3Mjgz&per_page=5&range=50mi`
 var tableEl = document.getElementById("test");
-var weatherIconEl = document.getElementById("weather-icon")
+var weatherIconEl = document.getElementById("weather-icon");
+var tempEl = document.getElementById("temp"); // Suzy: set variable for temp element
+
 // Aleena: fetch when the page is loaded
 window.onload = function(){
 var cities = localStorage.getItem("cities");
@@ -29,7 +31,13 @@ fetch(weatherURL)
     })
     .then(function(data){
         console.log(data)
-weatherIconEl.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`)
+    weatherIconEl.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
+    
+    // Suzy: Add temp converted to fahrenheit to display under weather icon
+    var tempF = ((data.main.temp - 273.15) * 1.80 + 32).toFixed(2);
+    console.log(tempF);
+    tempEl.append(tempF + "F");
+
     })};
 
 
