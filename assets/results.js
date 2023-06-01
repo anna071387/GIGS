@@ -1,5 +1,5 @@
 // Aleena: declare variables
-var seatGeekURL = `https://api.seatgeek.com/2/venues?client_id=MzM4NjkxMjN8MTY4NDgwNzIxOS45Nzg3Mjgz&per_page=5`
+var seatGeekURL = `https://api.seatgeek.com/2/venues?client_id=MzM4NjkxMjN8MTY4NDgwNzIxOS45Nzg3Mjgz&per_page=5&range=50mi`
 
 // Aleena: fetch when the page is loaded
 window.onload = function(){
@@ -10,6 +10,12 @@ fetch(seatGeekURL+"&city="+cities)
 })
 .then(function(data){
     console.log(data)
+ 
+    for(var i = 0; i < data.list.length; i++){
+        console.log(data.list[i]);
+        var address = document.createElement(h2);
+        address.textContent=data.list[i].venues.city}
+    
 
 })
 
