@@ -24,14 +24,16 @@ body {
 /* Suzy: Add css for weather div to display icon and temp on top right */
 .weather {
   position: absolute;
-  top: 50px;
+  top: 30px; /* To align position with logo on navbar */
   right: 50px;
 }
 
 #temp {
   display: block;
-  font-size: 15px;
+  font-size: 20px;
   color: white;
+  text-align: center;
+  transform: translate(-5%, -70%); /* Suzy: To overlay text to weather icon */
 }
 
 .search-results {
