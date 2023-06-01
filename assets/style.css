@@ -1,7 +1,7 @@
 :root {
     --primary: #7A29FD;
     --secondary: #707070;
-    --white: #FFFFFF;
+    --white: #f2ecfc;
     --black: #000000;
 }
 
@@ -11,11 +11,12 @@ a {
 
 body {
     font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
 }
 
 .background-img {
     height: 100vh;
-    background-image: url(../assets/Images/DarkBG_small.jpg);
+    background: url(./images/DarkBGsmall-01.png);
     background-size: cover;
 }
 
@@ -24,19 +25,19 @@ body {
     justify-content: space-between;
 }
 
-#search {
-    display: flex;
-
+.answer {
+    color:#f2ecfc;
 }
 
-#searchForm {
+
+#searchFrom {
     position: fixed;
     top: 50%;
     left: 38%;
     margin-top: -50px;
     margin-left: -100px;
-    background-color: #FFFFFF;
-}
+    background-color: white;
+} 
 
 input {
     float: left;
@@ -72,6 +73,14 @@ input {
     align-items: center;
 }
 
+.support {
+    color: #f2ecfc;
+  }
+  .support:hover {
+    color:#7A29FD;
+  }
+  
+
 .footer {
     display: flex;
     flex-direction: row;
@@ -79,7 +88,7 @@ input {
     justify-content: center;
     min-height: 50px;
     background-color: black;
-    color: white;
+    color: #f2ecfc;
     column-gap: 50px;
 }
 

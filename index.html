@@ -13,13 +13,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
   <!-- Suzy: Add link for google font family: Montserrat -->
-  <link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800'
-    rel='stylesheet' type='text/css'>
-
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <!-- rel='stylesheet' type='text/css'> -->
   <link rel="stylesheet" href="./assets/style.css">
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- 
+
 
 </head>
 
@@ -30,12 +28,16 @@
     <div id="header" class="container-fluid">
       <nav class="navbar navbar-expand-lg navbar-light">
         <h1><img src="./assets/images/Gigs_LOGO.png" alt="GIGS logo" class="logo"></h1>
+
+        <p id="1a" class="answer" style="font-size:36px"></p>
+        
+
         <!-- Suzy: Remove container-fluid class -->
         <form class="justify-content-end">
-            <div class="saved-link"><i class="fa fa-heart-o" aria-hidden="true"></i>
-              <!-- Suzy: Add results page placeholder and link when saved is clicked -->
-              <a href="/results.html">SAVED</a> 
-            </div>
+          <div class="saved-link"><i class="fa fa-heart-o" aria-hidden="true"></i>
+            <!-- Suzy: Add results page placeholder and link when saved is clicked -->
+            <a href="/results.html">SAVED</a>
+          </div>
         </form>
       </nav>
     </div>
@@ -52,18 +54,21 @@
     <button id="searchButton" class="btn btn-outline-light my-2 my-sm-0 col-1" type="submit">Search</button>
   </div>
 
+
+  </div>
+  
+
   <!-- Suzy: Add footer with Gigs logo, copyright, contact and support links -->
   <div class="footer">
     <div><img src="./assets/images/Gigs_LOGO.png" alt="GIGS logo" class="footer-logo"> &copy; 2023 GIGS. All rights
       reserved.</div>
-    <div><i class="fa fa-envelope"></i> Contact</div>
-    <div>Support</div>
-    </div>
+    <div class="support"><i class="fa fa-envelope"></i> Contact</div>
+    <div class="support">Support</div>
   </div>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
   <script src="./assets/script.js"></script>
- 
+
 
 </body>
 
