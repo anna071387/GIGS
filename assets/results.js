@@ -31,10 +31,10 @@ fetch(weatherURL)
     })
     .then(function(data){
         console.log(data)
-    weatherIconEl.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
+    weatherIconEl.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`); // Suzy: Increase weather icon size
     
     // Suzy: Add temp converted to fahrenheit to display under weather icon
-    var tempF = ((data.main.temp - 273.15) * 1.80 + 32).toFixed(2);
+    var tempF = ((data.main.temp - 273.15) * 1.80 + 32).toFixed(0); // Suzy: Change to 0 digits to appear after decimal point for temp in F
     console.log(tempF);
     tempEl.append(tempF + "F");
 
