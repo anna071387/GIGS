@@ -14,7 +14,7 @@ html,
 }
 
 body {
-  background: linear-gradient(#000000,#7A29FD, #000000);
+  background: black;
   /* Suzy: add style to allow result content to display with footer at bottom of page */
   position: relative;
   margin: 0;
@@ -154,10 +154,14 @@ Switch toggle button  abd back button finished */
 }
 
 /* Aleena: styled result table */
-.secondRow{
-  border: #000000;
-  border-width: 1px;
-  border-style: solid;
+.firstrow{
+  width: 280px;
+  height: 210px;
+}
+.secondrow{
+  width: 280px;
+  height: 210px;
+  padding-top: 50px;
 }
 
 
