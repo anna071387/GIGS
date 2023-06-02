@@ -1,10 +1,11 @@
 // Aleena: declare variables
 var seatGeekURL = `https://api.seatgeek.com/2/venues?client_id=MzM4NjkxMjN8MTY4NDgwNzIxOS45Nzg3Mjgz&per_page=5&range=50mi`
-var tableEl = document.getElementById("test");
+var searchResultsForEl = document.getElementById("searchResultsFor");
+var ColumnEl = document.getElementById("column");
 var weatherIconEl = document.getElementById("weather-icon");
 var tempEl = document.getElementById("temp"); // Suzy: set variable for temp element
-
-// Aleena: fetch when the page is loaded
+var url = "";
+// Aleena: fetch when the page is loaded and display the results
 window.onload = function(){
 var cities = localStorage.getItem("cities");
 fetch(seatGeekURL+"&city="+cities)
@@ -13,15 +14,31 @@ fetch(seatGeekURL+"&city="+cities)
 })
 .then(function(data){
     console.log(data)
+    searchResultsForEl.append(cities);
  
     for(var i = 0; i < data.venues.length; i++){
         console.log(data.venues[i]);
-        var address = document.createElement("h2");
-        address.textContent=data.venues[i].name;
-  tableEl.appendChild(address)
+        url= data.venues[i].url
+        console.log(url)
+        var card = document.createElement("div");
+        card.setAttribute = ("class","custom-second");
+        var venueEl = document.createElement("h4");
+        venueEl.textContent=data.venues[i].name;
+        var venueCityEl = document.createElement ("p");
+        venueCityEl.textContent=data.venues[i].extended_address;
+        var button = document.createElement("button");
+        button.innerText = "GIG details";
+    ColumnEl.appendChild(card);
+    card.append(venueEl,venueCityEl,button);
     } 
    getWeather(cities) 
 })
+
+// Aleena: clickable ticket buttons
+function getURL(){
+    console.log(url);
+    window.open(url);
+}
 
 function getWeather(cities){
 var weatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${cities}&APPID=14cbe9a851348e71f4881cd59afa5e76`;

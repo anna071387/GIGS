@@ -145,6 +145,15 @@ Switch toggle button  abd back button finished */
   color: #f2ecfc;
 
 }
+
+/* Aleena: styled result table */
+.secondRow{
+  border: #000000;
+  border-width: 1px;
+  border-style: solid;
+}
+
+
 /* Anna matched footer with index.html */
 .footer {
   display: flex;
