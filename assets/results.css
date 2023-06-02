@@ -21,6 +21,21 @@ body {
   margin:0;
 }
 
+/* Suzy: Add css for weather div to display icon and temp on top right */
+.weather {
+  position: absolute;
+  top: 30px; /* To align position with logo on navbar */
+  right: 50px;
+}
+
+#temp {
+  display: block;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  transform: translate(-5%, -70%); /* Suzy: To overlay text to weather icon */
+}
+
 .search-results {
   display: flex;
   padding: 25px;
@@ -43,10 +58,11 @@ a {
   padding: 10px 8px 16px 7px;
 }
 
-a:hover {
+/* Suzy: Comment out to prevent highlighting of logo when clicked which is to replace need for back button? */
+/* a:hover {
   background-color: #bf9bfa;
   color: black;
-}
+} */
 .square {
   background :#7A29FD;
   /* border-radius: 50%; */
@@ -139,6 +155,10 @@ Switch toggle button  abd back button finished */
   background-color: black;
   color: #f2ecfc;
   column-gap: 50px;
+  /* Suzy: Add css to position footer to bottom of the page */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-logo {

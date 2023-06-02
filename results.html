@@ -18,7 +18,14 @@
 <body>
     <div id="header" class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <h1><img src="./assets/images/Gigs_LOGO.png" alt="GIGS logo" class="logo"></h1>
+            <!-- Suzy: Add <a> tag with href attribute so logo can be clicked to navigate to homepage  -->
+            <h1><a href="index.html"><img src="./assets/images/Gigs_LOGO.png" alt="GIGS logo" class="logo"></a></h1>
+            <div class="weather">
+                <img id="weather-icon">
+                <!-- Suzy: Add placeholder for temp -->
+                <p id="temp"></p>
+            </div>
+            
 
         </nav>
         <!-- Anna added toggle button for image switch -->
@@ -44,7 +51,7 @@
             <p><i class="fa fa-calendar fa-3x" aria-hidden="true"></i></p>
         </div>
         <!-- Aleena: table for results/ hidden -->
-        <div class="table-container row d-flex justify-content-center mt-5 ">
+        <div id="test"class="table-container row d-flex justify-content-center mt-5 ">
             <table class="table table-bordered table-hover w-50 d-none">
                 <tr>
                     <td class="col-4"></td>
@@ -69,13 +76,16 @@
             </table>
         </div>
         <!-- Anna Added footer to match index.html -->
-        <div class="footer">
-            <div><img src="./assets/images/Gigs_LOGO.png" alt="GIGS logo" class="footer-logo"> &copy; 2023 GIGS. All
-                rights
-                reserved.</div>
-            <div class="support"><i class="fa fa-envelope"></i> Contact</div>
-            <div class="support">Support</div>
-        </div>
+        
+    </div>
+    <!-- Suzy: Move footer div outside of header div and place at bottom of page -->
+    <div class="footer">
+        <div><img src="./assets/images/Gigs_LOGO.png" alt="GIGS logo" class="footer-logo"> &copy; 2023 GIGS. All
+            rights
+            reserved.</div>
+        <div class="support"><i class="fa fa-envelope"></i> Contact</div>
+        <div class="support">Support</div>
+    </div>
         <!-- Aleena: Link script file -->
         <script src="./assets/results.js"></script>
 </body>
