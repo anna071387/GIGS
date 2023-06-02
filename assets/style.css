@@ -30,12 +30,12 @@ body {
 }
 
 
-#searchFrom {
+#cityInput {
     position: fixed;
+    width: 30%;
     top: 50%;
-    left: 38%;
+    left: 35%;
     margin-top: -50px;
-    margin-left: -100px;
     background-color: white;
 } 
 
