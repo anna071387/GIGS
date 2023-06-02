@@ -1,0 +1,167 @@
+:root {
+  --primary: #7A29FD;
+  --secondary: #707070;
+  --white: #f2ecfc;
+  --black: #000000;
+}
+
+html,
+.wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(#000000,#7A29FD, #000000);
+}
+
+.header{ 
+  margin:0;
+}
+
+/* Suzy: Add css for weather div to display icon and temp on top right */
+.weather {
+  position: absolute;
+  top: 30px; /* To align position with logo on navbar */
+  right: 50px;
+}
+
+#temp {
+  display: block;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  transform: translate(-5%, -70%); /* Suzy: To overlay text to weather icon */
+}
+
+.search-results {
+  display: flex;
+  padding: 25px;
+}
+
+.fa {
+  padding-left: 25px;
+}
+
+/* a {
+  color: var(--primary)
+} */
+
+/* Anna Added toggle and back button to index html 
+It will be closed at the end with note \Toggle see further */
+a {
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 7px ;
+  padding: 10px 8px 16px 7px;
+}
+
+/* Suzy: Comment out to prevent highlighting of logo when clicked which is to replace need for back button? */
+/* a:hover {
+  background-color: #bf9bfa;
+  color: black;
+} */
+.square {
+  background :#7A29FD;
+  /* border-radius: 50%; */
+  color: #000000;
+  padding-top: 0px;
+  height: 34px;
+  gap: 5px;
+}
+.squeareColor {
+
+  background :#7A29FD;
+  color: #000000;
+}
+/* img {
+  size:95%;
+
+} */
+.toggle{
+  padding-left:50px;
+}
+/* switch toggle button */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 112px;
+  height: 34px;
+}
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  display: inline;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #7A29FD;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 78px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #f2ecfc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #bf9bfa;
+}
+
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+/* \Toggle
+Switch toggle button  abd back button finished */
+
+.support {
+  color: #f2ecfc;
+}
+.support:hover {
+  color:#7A29FD;
+}
+
+.color {
+  color: #f2ecfc;
+
+}
+/* Anna matched footer with index.html */
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  background-color: black;
+  color: #f2ecfc;
+  column-gap: 50px;
+  /* Suzy: Add css to position footer to bottom of the page */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-logo {
+  width: 100px;
+}
+/* footer ended */

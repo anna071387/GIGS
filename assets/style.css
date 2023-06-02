@@ -1,11 +1,59 @@
+:root {
+    --primary: #7A29FD;
+    --secondary: #707070;
+    --white: #f2ecfc;
+    --black: #000000;
+}
+
+a {
+    color: var(--primary)
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
 }
 
 .background-img {
     height: 100vh;
-    background-image: url(../assets/images/gigs_background.png);
+    background: url(./images/DarkBGsmall-01.png);
     background-size: cover;
+}
+
+/* Override bootstrap css */
+.navbar-expand-lg {
+    justify-content: space-between;
+}
+
+.answer {
+    color:#f2ecfc;
+}
+
+
+#cityInput {
+    position: fixed;
+    width: 30%;
+    top: 50%;
+    left: 35%;
+    margin-top: -50px;
+    background-color: white;
+} 
+
+input {
+    float: left;
+    width: 100%;
+    padding-top: 5px;
+    border-radius: 0%;
+    border: none;
+}
+
+#searchButton{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+    
 }
 
 .saved-link {
@@ -18,6 +66,21 @@ body {
     text-decoration: none;
 }
 
+#select {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.support {
+    color: #f2ecfc;
+  }
+  .support:hover {
+    color:#7A29FD;
+  }
+  
+
 .footer {
     display: flex;
     flex-direction: row;
@@ -25,10 +88,19 @@ body {
     justify-content: center;
     min-height: 50px;
     background-color: black;
-    color: white;
+    color: #f2ecfc;
     column-gap: 50px;
+    /* Suzy: Add css to position footer to bottom of the page */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer-logo {
     width: 100px;
+}
+
+/* Results page placeholder */
+.saved-events {
+    margin-left: 3%;
 }
