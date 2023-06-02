@@ -15,6 +15,12 @@ html,
 
 body {
   background: linear-gradient(#000000,#7A29FD, #000000);
+  /* Suzy: add style to allow result content to display with footer at bottom of page */
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+  padding-bottom: 7rem;
+  box-sizing: inherit;
 }
 
 .header{ 
@@ -134,10 +140,11 @@ input:checked + .slider:before {
 /* \Toggle
 Switch toggle button  abd back button finished */
 
-.support {
+/* Suzy: add class contact */
+.contact, .support {
   color: #f2ecfc;
 }
-.support:hover {
+.contact:hover, .support:hover {
   color:#7A29FD;
 }
 
@@ -167,10 +174,27 @@ Switch toggle button  abd back button finished */
   /* Suzy: Add css to position footer to bottom of the page */
   position: absolute;
   bottom: 0;
-  width: 100%;
+  right: 0;
+  left: 0;
 }
 
 .footer-logo {
   width: 100px;
 }
 /* footer ended */
+
+/* Add media queries to make footer responsive in results page */
+@media screen and (max-width: 755px) {
+  .table-container {
+    padding-bottom: 5rem;
+  }
+  .footer {
+    width: 100vw; 
+    display: grid;
+  }
+  .support {
+    margin-top: 2%;
+    padding-left: 7%;
+    padding-bottom: 5%;
+  }
+}
