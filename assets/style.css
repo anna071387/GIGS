@@ -32,7 +32,6 @@ body {
 .centerBtn {
 display: flex;
 width: 100px;
-
 }
 #cityInput {
     position: fixed;

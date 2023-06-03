@@ -1,6 +1,6 @@
 # GIGS
 
-![alt text](./assets/images/)
+![alt text](./assets/images/LandingPage.png)
 
 
 ## Description

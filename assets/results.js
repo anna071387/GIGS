@@ -94,7 +94,9 @@ window.onload = function () {
         event.preventDefault();
         location.replace("./index.html")
     });
+
 }
+
 
 
 

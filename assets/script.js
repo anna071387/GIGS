@@ -12,8 +12,6 @@ var weatherURL = `http://api.openweathermap.org/data/2.5/weather?q=London,uk&APP
 
 //Aleena - redirect to results.hml (needs to work on functionality,
 
-// WORKS
-
 var weatherURL = 'http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=14cbe9a851348e71f4881cd59afa5e76'
 
 
@@ -46,6 +44,8 @@ $(document).ready(function () {
     $('#1a').text(today.format('MMM D, YYYY'));
     console.log(today);
   });
+
+  
 
 
 
