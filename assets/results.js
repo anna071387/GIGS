@@ -25,11 +25,10 @@ window.onload = function () {
                 var dateContainer= document.createElement("div");
                 dateContainer.className ="firstrow";
                 var dtEl = document.createElement("h4");
-                dtEl.textContent= data.events[i].datetime_local;
                 // Suzy: format date and time
-                var newDateTime = dayjs().format('MMM D, YYYY h:mm A');
+                dtEl.textContent = dayjs(data.events[i].datetime_local).format('MMM D, YYYY, h:mm A');
                 firstColumnEl.appendChild(dateContainer);
-                dateContainer.append(newDateTime);
+                dateContainer.append(dtEl);
                 var card = document.createElement("div");
                 card.className = "secondrow";
                 var performerEl = document.createElement("h4");
