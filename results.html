@@ -15,7 +15,7 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <!-- Anna added results.css link -->
     <link rel="stylesheet" href="./assets/results.css">
-    
+
 </head>
 
 <body>
@@ -28,6 +28,8 @@
                 <!-- Suzy: Add placeholder for temp -->
                 <p id="temp"></p>
             </div>
+
+
         </nav>
         <!-- Anna added toggle button for image switch -->
         <section class="toggle">
@@ -42,7 +44,8 @@
     <!-- Anna styled css location of this div -->
     <div class="search-results color">
         <h2 id="searchResultsFor">Search Results for: </h2>
-        <p><i class="fa fa-calendar fa-3x" aria-hidden="true"></i></p>
+        <!-- Aleena: Added the datepicker -->
+        <p><input id='calendar_filter' type="date"></p>
     </div>
     <!-- Aleena: table for results/ hidden -->
     <section id ="events">
@@ -58,17 +61,18 @@
     <!-- Suzy: Move footer div outside of header div and place at bottom of page -->
     <div class="footer">
         <!-- Suzy: add copyright class to add css style for responsive layout -->
-        <div class="copyright"><img src="./assets/images/Gigs_LOGO.png" alt="GIGS logo" class="footer-logo"> &copy; 2023 GIGS. All rights reserved.</div>
+        <div class="copyright"><img src="./assets/images/Gigs_LOGO.png" alt="GIGS logo" class="footer-logo"> &copy; 2023
+            GIGS. All rights reserved.</div>
         <!-- Suzy: change class from support to contact -->
         <div class="contact"><i class="fa fa-envelope"></i> Contact</div>
         <div class="support">Support</div>
     </div>
 
-        <!-- Suzy: add jQuery link -->
-        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <!-- Suzy: add jQuery link -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
 
-        <!-- Aleena: Link script file -->
-        <script src="./assets/results.js"></script>
+    <!-- Aleena: Link script file -->
+    <script src="./assets/results.js"></script>
 </body>
 
 </html>
