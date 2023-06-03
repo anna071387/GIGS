@@ -105,9 +105,8 @@ function getWeather(cities) {
         })
 };
 
-function BgChange() {
-    const body = document.querySelector('body')
-    body.style = `background: url(./images/Gigs_LOGO.png) no-repeat center center/cover`
+
+
 }
 
 
