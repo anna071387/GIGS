@@ -29,7 +29,11 @@ body {
     color:#f2ecfc;
 }
 
+.centerBtn {
+display: flex;
+width: 100px;
 
+}
 #cityInput {
     position: fixed;
     width: 30%;

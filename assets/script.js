@@ -11,30 +11,31 @@ var weatherURL = `http://api.openweathermap.org/data/2.5/weather?q=London,uk&APP
 
 
 //Aleena - redirect to results.hml (needs to work on functionality,
-//  Anna: added "El" to searchButton(El))
-// WORKS
-var searchButtonEl = document.getElementById("searchButton");
 
+// WORKS
+
+var weatherURL = 'http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=14cbe9a851348e71f4881cd59afa5e76'
 
 
 //Aleena - redirect to results.html when search button is clicked
-searchButton.addEventListener("click",function(event){
+searchButtonEl.addEventListener("click",function(event){
   event.preventDefault();
   localStorage.setItem("cities",cityInputEl.value);
   window.location.replace("./results.html")
 })
 
 
-//weather API Mike
-
+//weather API
+searchButtonEl.addEventListener("click",function(event){
     fetch(weatherURL)
     .then(function(response){
         return response.json();
     })
     .then(function(data){
         console.log(data)
-    });
+    })
 
+});
 
 
 // AnnaG: added a todays date that can be displayed at the navbar in the center
