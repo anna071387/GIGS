@@ -107,7 +107,6 @@ function getWeather(cities) {
 
 
 
-}
 
 
 
