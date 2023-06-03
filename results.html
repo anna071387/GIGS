@@ -15,7 +15,7 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <!-- Anna added results.css link -->
     <link rel="stylesheet" href="./assets/results.css">
-    
+
 </head>
 
 <body>
@@ -33,17 +33,19 @@
         <section class="toggle">
             <button onclick="toggle()">Toggle dark mode</button>   
         </section> 
-    </div>
+  </div>
+  
 
-   
 
     <!-- Suzy: move search-results div and result-container outside header div -->
 
     <!-- Anna styled css location of this div -->
     <div class="search-results color">
         <h2 id="searchResultsFor">Search Results for: </h2>
-        <p><i class="fa fa-calendar fa-3x" aria-hidden="true"></i></p>
+        <!-- Aleena: Added the datepicker -->
+        <p><input id='calendar_filter' type="date"></p>
     </div>
+  
     <!-- Aleena: table for results/ hidden -->
     <section id ="events">
     <div id="result-container"class="table-container row justify-content-center mt-5 ">
@@ -55,20 +57,30 @@
         <!-- Anna Added footer to match index.html -->
         
     
+    <!-- Aleena: table for results-->
+    <div id="result-container" class="table-container row justify-content-center mt-5 ">
+        <div id="first-column" class="col-lg-2 col-sm-12"></div>
+        <div id="second-column" class="col-lg-3 col-sm-6"></div>
+        <div id="third-column" class="col-lg-3 col-sm-6"></div>
+    </div>
+    <!-- Anna Added footer to match index.html -->
+
+
     <!-- Suzy: Move footer div outside of header div and place at bottom of page -->
     <div class="footer">
         <!-- Suzy: add copyright class to add css style for responsive layout -->
-        <div class="copyright"><img src="./assets/images/Gigs_LOGO.png" alt="GIGS logo" class="footer-logo"> &copy; 2023 GIGS. All rights reserved.</div>
+        <div class="copyright"><img src="./assets/images/Gigs_LOGO.png" alt="GIGS logo" class="footer-logo"> &copy; 2023
+            GIGS. All rights reserved.</div>
         <!-- Suzy: change class from support to contact -->
         <div class="contact"><i class="fa fa-envelope"></i> Contact</div>
         <div class="support">Support</div>
     </div>
 
-        <!-- Suzy: add jQuery link -->
-        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <!-- Suzy: add jQuery link -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
 
-        <!-- Aleena: Link script file -->
-        <script src="./assets/results.js"></script>
+    <!-- Aleena: Link script file -->
+    <script src="./assets/results.js"></script>
 </body>
 
 </html>
