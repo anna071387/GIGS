@@ -26,8 +26,10 @@ window.onload = function () {
                 dateContainer.className ="firstrow";
                 var dtEl = document.createElement("h4");
                 dtEl.textContent= data.events[i].datetime_local;
+                // Suzy: format date and time
+                var newDateTime = dayjs().format('MMM D, YYYY h:mm A');
                 firstColumnEl.appendChild(dateContainer);
-                dateContainer.append(dtEl);
+                dateContainer.append(newDateTime);
                 var card = document.createElement("div");
                 card.className = "secondrow";
                 var performerEl = document.createElement("h4");
