@@ -7,23 +7,13 @@ var thirdColumnEl = document.getElementById("third-column");
 var weatherIconEl = document.getElementById("weather-icon");
 var tempEl = document.getElementById("temp"); // Suzy: set variable for temp element
 var url = "";
-
 //Aleena: when the page is loaded call these functions
 window.onload = function () {
   // Listener to call the fetch_api function when a new date is selected on the calendar
   let cal = document.getElementById("calendar_filter");
   cal.addEventListener("change", fetch_api);
-
-
-
-    // Listener to call the fetch_api function when a new date is selected on the calendar
-    let cal = document.getElementById("calendar_filter");
-    cal.addEventListener("change", fetch_api);
-
   fetch_api();
 };
-
-
 // Aleena: When a date is selected, call the fetch/API function again,
 // passing datetime_local=YYYY-MM-DD along with venue.city....
 function fetch_api() {
@@ -32,13 +22,11 @@ function fetch_api() {
   let cal = document.getElementById("calendar_filter").value;
   let query = seatGeekURL + "&venue.city=" + cities;
   if (cal.length > 0) query += "&datetime_local.gte=" + cal;
-
   console.log(query);
   firstColumnEl.innerHTML = "";
   secondColumnEl.innerHTML = "";
   thirdColumnEl.innerHTML = "";
   searchResultsForEl.innerHTML = "";
-
   fetch(query)
     .then(function (response) {
       return response.json();
@@ -46,12 +34,10 @@ function fetch_api() {
     .then(function (data) {
       console.log(data);
       searchResultsForEl.append(cities);
-
       for (var i = 0; i < data.events.length; i++) {
         console.log(data.events[i]);
         // url= data.events[i].url
         console.log(url);
-
         var card = document.createElement("div");
         card.className = "secondrow";
         var dtEl = document.createElement("h4");
@@ -73,11 +59,9 @@ function fetch_api() {
         thirdColumnEl.appendChild(imgContainer);
         imgContainer.append(img);
       }
-
       getWeather(cities);
     });
 }
-
 // Mike - fetched weather API
 function getWeather(cities) {
   var weatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${cities}&APPID=14cbe9a851348e71f4881cd59afa5e76`;
@@ -91,7 +75,6 @@ function getWeather(cities) {
         "src",
         `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
       ); // Suzy: Increase weather icon size
-
       // Suzy: Add temp converted to fahrenheit to display under weather icon
       var tempF = ((data.main.temp - 273.15) * 1.8 + 32).toFixed(0); // Suzy: Change to 0 digits to appear after decimal point for temp in F
       console.log(tempF);
