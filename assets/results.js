@@ -12,15 +12,15 @@ var url = "";
 window.onload = function () {
 
     // Anna: Added switch on toggle button to switch the background
-    const slider = document.querySelector('.slider')
-    slider.addEventListener('mousedown', BgChange)
+    // const slider = document.querySelector('.slider')
+    // slider.addEventListener('mousedown', BgChange)
 
     //Anna - redirect to index.hml
-    var backBtn = document.getElementById("backBtn");
-    backBtn.addEventListener("click", function (event) {
-        event.preventDefault();
-        location.replace("./index.html")
-    });
+    // var backBtn = document.getElementById("backBtn");
+    // backBtn.addEventListener("click", function (event) {
+    //     event.preventDefault();
+    //     location.replace("./index.html")
+    // });
 
     // Listener to call the fetch_api function when a new date is selected on the calendar
     let cal = document.getElementById("calendar_filter");
