@@ -10,7 +10,6 @@ var url = "";
 
 //Aleena: when the page is loaded call these functions
 window.onload = function () {
-    
   // Listener to call the fetch_api function when a new date is selected on the calendar
   let cal = document.getElementById("calendar_filter");
   cal.addEventListener("change", fetch_api);
@@ -31,7 +30,7 @@ function fetch_api() {
   firstColumnEl.innerHTML = "";
   secondColumnEl.innerHTML = "";
   thirdColumnEl.innerHTML = "";
-searchResultsForEl.innerHTML = "";
+  searchResultsForEl.innerHTML = "";
 
   fetch(query)
     .then(function (response) {
@@ -45,18 +44,14 @@ searchResultsForEl.innerHTML = "";
         console.log(data.events[i]);
         // url= data.events[i].url
         console.log(url);
-        var dateContainer = document.createElement("div");
-        dateContainer.className = "firstrow";
+
+        var card = document.createElement("div");
+        card.className = "secondrow";
         var dtEl = document.createElement("h4");
         // Suzy: format date and time
         dtEl.textContent = dayjs(data.events[i].datetime_local).format(
           "MMM D, YYYY, h:mm A"
         );
-        firstColumnEl.appendChild(dateContainer);
-        dateContainer.append(dtEl);
-
-        var card = document.createElement("div");
-        card.className = "secondrow";
         var performerEl = document.createElement("h4");
         performerEl.textContent = data.events[i].title;
         var venueEl = document.createElement("h5");
@@ -64,7 +59,7 @@ searchResultsForEl.innerHTML = "";
         var addressEl = document.createElement("p");
         addressEl.textContent = data.events[i].venue.extended_address;
         secondColumnEl.appendChild(card);
-        card.append(performerEl, venueEl, addressEl);
+        card.append(dtEl, performerEl, venueEl, addressEl);
         var imgContainer = document.createElement("div");
         var img = document.createElement("img");
         img.setAttribute("src", `${data.events[i].performers[0].image}`);
@@ -78,7 +73,7 @@ searchResultsForEl.innerHTML = "";
 
 // Mike - fetched weather API
 function getWeather(cities) {
-    var weatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${cities}&APPID=14cbe9a851348e71f4881cd59afa5e76`;
+  var weatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${cities}&APPID=14cbe9a851348e71f4881cd59afa5e76`;
   fetch(weatherURL)
     .then(function (response) {
       return response.json();
@@ -89,17 +84,14 @@ function getWeather(cities) {
         "src",
         `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
       ); // Suzy: Increase weather icon size
-     
 
       // Suzy: Add temp converted to fahrenheit to display under weather icon
       var tempF = ((data.main.temp - 273.15) * 1.8 + 32).toFixed(0); // Suzy: Change to 0 digits to appear after decimal point for temp in F
       console.log(tempF);
       tempEl.append(tempF + "F");
-      
     });
-
-};
-let toggle = document.getElementById('mode');
-toggle.addEventListener ('click', function() {
-    document.body.classList.toggle('dark')
-} )
+}
+let toggle = document.getElementById("mode");
+toggle.addEventListener("click", function () {
+  document.body.classList.toggle("dark");
+});
