@@ -31,6 +31,7 @@ function fetch_api() {
   firstColumnEl.innerHTML = "";
   secondColumnEl.innerHTML = "";
   thirdColumnEl.innerHTML = "";
+searchResultsForEl.innerHTML = "";
 
   fetch(query)
     .then(function (response) {
@@ -77,8 +78,7 @@ function fetch_api() {
 
 // Mike - fetched weather API
 function getWeather(cities) {
-    
-  var weatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${cities}&APPID=14cbe9a851348e71f4881cd59afa5e76`;
+    var weatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${cities}&APPID=14cbe9a851348e71f4881cd59afa5e76`;
   fetch(weatherURL)
     .then(function (response) {
       return response.json();
@@ -89,6 +89,7 @@ function getWeather(cities) {
         "src",
         `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
       ); // Suzy: Increase weather icon size
+     
 
       // Suzy: Add temp converted to fahrenheit to display under weather icon
       var tempF = ((data.main.temp - 273.15) * 1.8 + 32).toFixed(0); // Suzy: Change to 0 digits to appear after decimal point for temp in F
@@ -97,11 +98,8 @@ function getWeather(cities) {
       
     });
 
-
-    // Select toggle
-    let toggle = document.getElementById('mode');
-    toggle.addEventListener ('click', function() {
-        document.body.classList.toggle('dark')
-    } )
 };
-    
+let toggle = document.getElementById('mode');
+toggle.addEventListener ('click', function() {
+    document.body.classList.toggle('dark')
+} )
