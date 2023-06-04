@@ -14,8 +14,15 @@ window.onload = function () {
   let cal = document.getElementById("calendar_filter");
   cal.addEventListener("change", fetch_api);
 
+
+
+    // Listener to call the fetch_api function when a new date is selected on the calendar
+    let cal = document.getElementById("calendar_filter");
+    cal.addEventListener("change", fetch_api);
+
   fetch_api();
 };
+
 
 // Aleena: When a date is selected, call the fetch/API function again,
 // passing datetime_local=YYYY-MM-DD along with venue.city....
