@@ -1,84 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GIGS</title>
 
     <!-- Aleena: Bootstrap Link -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
     <!-- Suzy: Font Awesome CDN link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <!-- Suzy: Add link for google font family: Montserrat -->
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
     <!-- Anna added results.css link -->
-    <link rel="stylesheet" href="./assets/results.css">
+    <link rel="stylesheet" href="./assets/results.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
+    <section class ="screen">
     <div id="header" class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <!-- Suzy: Add <a> tag with href attribute so logo can be clicked to navigate to homepage  -->
-            <h1><a href="index.html"><img src="./assets/images/Gigs_LOGO.png" alt="GIGS logo" class="logo"></a></h1>
-            <div class="weather">
-                <img id="weather-icon">
-                <!-- Suzy: Add placeholder for temp -->
-                <p id="temp"></p>
-            </div>
-
-
-        </nav>
-        <!-- Anna added toggle button for image switch -->
-        <section class="toggle">
-
-            <a href="#" id=backBtn class="previous square squareColor">&#171;</a>
-
-
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-
-                <!-- <button onclick="toggle()">Toggle dark mode</button> -->
-            </label>
-        </section>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <!-- Suzy: Add <a> tag with href attribute so logo can be clicked to navigate to homepage  -->
+        <h1>
+          <a href="index.html"
+            ><img
+              src="./assets/images/Gigs_LOGO.png"
+              alt="GIGS logo"
+              class="logo"
+          /></a>
+        </h1>
+        <div class="weather">
+          <img id="weather-icon" />
+          <!-- Suzy: Add placeholder for temp -->
+          <p id="temp"></p>
+        </div>
+      </nav>
+      <!-- Anna added toggle button for image switch -->
+      <section class="toggle">
+        <input type="checkbox" id="mode" />
+      </section>
     </div>
-
 
     <!-- Suzy: move search-results div and result-container outside header div -->
 
     <!-- Anna styled css location of this div -->
-    <div class="search-results color">
-        <h2 id="searchResultsFor">Search Results for: </h2>
-        <!-- Aleena: Added the datepicker -->
-        <p><input id='calendar_filter' type="date"></p>
-    </div>
-    <!-- Aleena: table for results-->
-    <div id="result-container" class="table-container row justify-content-center mt-5 ">
-        <div id="first-column" class="col-lg-2 col-sm-12"></div>
-        <div id="second-column" class="col-lg-3 col-sm-6"></div>
-        <div id="third-column" class="col-lg-3 col-sm-6"></div>
-    </div>
-    <!-- Anna Added footer to match index.html -->
 
+    <div class="search-results color">
+      <h2 id="searchResultsFor">Search Results for:  </h2>
+
+      <!-- Aleena: Added the datepicker -->
+      <p><input id="calendar_filter" type="date" /></p>
+    </div>
+
+    <!-- Aleena: table for results/ hidden -->
+    <div
+      id="result-container"
+      class="table-container row justify-content-center mt-5"
+    >
+      <div id="first-column" class="col-lg-0 col-sm-12"></div>
+      <div id="second-column" class="col-lg-6 col-sm-6"></div>
+      <div id="third-column" class="col-lg-6 col-sm-6"></div>
+    </div>
+
+    <!-- Anna Added footer to match index.html -->
 
     <!-- Suzy: Move footer div outside of header div and place at bottom of page -->
     <div class="footer">
-        <!-- Suzy: add copyright class to add css style for responsive layout -->
-        <div class="copyright"><img src="./assets/images/Gigs_LOGO.png" alt="GIGS logo" class="footer-logo"> &copy; 2023
-            GIGS. All rights reserved.</div>
-        <!-- Suzy: change class from support to contact -->
-        <div class="contact"><i class="fa fa-envelope"></i> Contact</div>
-        <div class="support">Support</div>
+      <!-- Suzy: add copyright class to add css style for responsive layout -->
+      <div class="copyright">
+        <img
+          src="./assets/images/Gigs_LOGO.png"
+          alt="GIGS logo"
+          class="footer-logo"
+        />
+        &copy; 2023 GIGS. All rights reserved.
+      </div>
+      <!-- Suzy: change class from support to contact -->
+      <div class="contact"><i class="fa fa-envelope"></i> Contact</div>
+      <div class="support">Support</div>
     </div>
+</section>
 
     <!-- Suzy: add jQuery link -->
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
 
     <!-- Aleena: Link script file -->
     <script src="./assets/results.js"></script>
-</body>
-
+  </body>
 </html>
