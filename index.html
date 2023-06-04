@@ -22,25 +22,33 @@
 </head>
 
 <body>
-  <!-- Suzy: Add placeholder image for background -->
-  <div class="background-img">
-    <!-- Suzy: Add navbar with Gigs logo image and Saved link -->
-    <div id="header" class="container-fluid">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <!-- Suzy: Add <a> tag with href attribute so logo can be clicked to navigate to homepage  -->
-        <h1><a href="index.html"><img src="./assets/images/Gigs_LOGO.png" alt="GIGS logo" class="logo"></a></h1>
-
-        <p id="1a" class="answer" style="font-size:36px"></p>
-        
-
-        <!-- Suzy: Remove container-fluid class -->
-        <form class="justify-content-end">
-          <div class="saved-link"><i class="fa fa-heart-o" aria-hidden="true"></i>
-            <!-- Suzy: Change href attribute to target saved html file when saved link is clicked -->
-            <a href="/saved.html">SAVED</a>
+  <section class="screen">
+    <!-- Suzy: Add placeholder image for background -->
+    <!-- <div class="background-img"> -->
+      <!-- Suzy: Add navbar with Gigs logo image and Saved link -->
+      <div id="header" class="grid-container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <!-- Suzy: Add <a> tag with href attribute so logo can be clicked to navigate to homepage  -->
+            <div class="grid-item">
+          <h1><a href="index.html"><img src="./assets/images/Gigs_LOGO.png" alt="GIGS logo" class="logo"></a></h1>
+        </div>
+          <div class="grid-item">
+          <p id="1a" class="answer" style="font-size:36px"></p>
+        </div>
+  
+          <!-- Suzy: Remove container-fluid class -->
+         
+          <form class="justify-content-end">
+            <div class="grid-item">
+            <div class="saved-link"><i class="fa fa-heart-o" aria-hidden="true"></i>
+              <!-- Suzy: Change href attribute to target saved html file when saved link is clicked -->
+              <a href="/saved.html">SAVED</a>
+            </div>
           </div>
-        </form>
-      </nav>
+          </form>
+       
+        </nav>
+      </div>
       
        <!-- Aleena: Added Search bar and button -->
   <div id="search" class="row">
@@ -50,7 +58,8 @@
     </form>
     <button id="searchButton" class="btn btn-outline-light my-2 my-sm-0 col-1" type="submit">Search</button>
   </div>
-    </div>
+
+
   
 
 
@@ -61,6 +70,7 @@
     <div class="support"><i class="fa fa-envelope"></i> Contact</div>
     <div class="support">Support</div>
   </div>
+</section>
 
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
   <script src="./assets/script.js"></script>
