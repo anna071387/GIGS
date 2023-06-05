@@ -210,8 +210,7 @@ background-image: url(https://i.postimg.cc/Hn0nstVK/Screenshot-2020-04-16-at-1-0
 
 .info-row {
   max-width: fit-content;
-  height: 230px;
-  padding-top: 15px;
+  height: 210px;
   color: #b3c1e9;
 }
 
@@ -237,12 +236,14 @@ background-image: url(https://i.postimg.cc/Hn0nstVK/Screenshot-2020-04-16-at-1-0
 }
 /* footer ended */
 
+
 /* Suzy: Add styling for result container */
 #result-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   column-gap: 2vw;
+  margin-top: 50px;
 }
 
 /* Suzy: Add styling for event image container */
@@ -253,10 +254,11 @@ row-gap: 1vw;
 }
 
 /* Suzy: Add styling for event info container */
-.third-column {
+#third-column {
   display: flex;
   flex-direction: column;
-  row-gap: 2vw;
+  row-gap: 1vw;
+  width: fit-content;
 }
 
 /* Add media queries to make footer responsive in results page */
