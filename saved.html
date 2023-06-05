@@ -51,6 +51,9 @@
         <p><i class="fa fa-calendar fa-3x" aria-hidden="true"></i></p>
       </div>
 
+      <!-- Suzy: Add empty container element for event history to be displayed -->
+      <div id="eventHistoryContainer"></div>
+       
       <!-- Suzy: Add footer -->
       <div class="footer">
         <div>
@@ -61,10 +64,14 @@
           />
           &copy; 2023 GIGS. All rights reserved.
         </div>
-        <div class="support"><i class="fa fa-envelope"></i> Contact</div>
-        <div class="support">Support</div>
+        <div class="contact"><i class="fa fa-envelope"></i> Contact</div>
+        <div class="support"><i class="fa fa-wrench"></i> Support</div>
       </div>
     </section>
-    <script src="./assets/results.js"></script>
+
+    <!-- Suzy: add jQuery link -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+
+    <script src="./assets/saved.js"></script>
   </body>
 </html>

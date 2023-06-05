@@ -112,10 +112,12 @@ input[type="checkbox"]:checked {
   align-items: center;
 }
 
+.contact,
 .support {
   color: #f2ecfc;
 }
 
+.contact:hover,
 .support:hover {
   color: #7a29fd;
 }
@@ -151,6 +153,16 @@ input[type="checkbox"]:checked {
     color: #f2ecfc;
 }
 
+.info-row {
+  width: 425px;
+  height: 210px;
+  color: #b3c1e9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
 @media screen and (max-width: 990px) {
   #searchButton {
     max-width: 100px;
@@ -160,5 +172,18 @@ input[type="checkbox"]:checked {
 @media screen and (max-width: 660px) {
   #searchButton {
     margin-left: 1px;
+  }
+}
+
+/* Add media queries to make footer responsive */
+@media screen and (max-width: 755px) {
+  .footer {
+    width: 100vw;
+    display: grid;
+  }
+  .support {
+    margin-top: 2%;
+    /* padding-left: 7%; */
+    padding-bottom: 5%;
   }
 }
