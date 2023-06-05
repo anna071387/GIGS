@@ -27,69 +27,91 @@
   </head>
 
   <body>
-    <section class ="screen">
-    <div id="header" class="container-fluid">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <!-- Suzy: Add <a> tag with href attribute so logo can be clicked to navigate to homepage  -->
-        <h1>
-          <a href="index.html"
-            ><img
-              src="./assets/images/Gigs_LOGO.png"
-              alt="GIGS logo"
-              class="logo"
-          /></a>
-        </h1>
-        <div class="weather">
-          <img id="weather-icon" />
-          <!-- Suzy: Add placeholder for temp -->
-          <p id="temp"></p>
-        </div>
-      </nav>
-      <!-- Anna added toggle button for image switch -->
-      <section class="toggle">
-        <input type="checkbox" id="mode" />
-      </section>
-    </div>
+    <section class="screen">
+      <div id="header" class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <!-- Suzy: Add <a> tag with href attribute so logo can be clicked to navigate to homepage  -->
+         <div class="grid-item">
+          <h1>
+            <a href="index.html"
+              ><img
+                src="./assets/images/Gigs_LOGO.png"
+                alt="GIGS logo"
+                class="logo"
+            /></a>
+          </h1>
+          </div>
 
-    <!-- Suzy: move search-results div and result-container outside header div -->
-
-    <!-- Anna styled css location of this div -->
-
-    <div class="search-results color">
-      <h2 id="searchResultsFor">Search Results for:  </h2>
-
-      <!-- Aleena: Added the datepicker -->
-      <p><input id="calendar_filter" type="date" /></p>
-    </div>
-
-    <!-- Aleena: table for results/ hidden -->
-    <div
-      id="result-container"
-      class="table-container row justify-content-center mt-5"
-    >
-      <div id="first-column" class="col-lg-0 col-sm-12"></div>
-      <div id="second-column" class="col-lg-6 col-sm-6"></div>
-      <div id="third-column" class="col-lg-6 col-sm-6"></div>
-    </div>
-
-    <!-- Anna Added footer to match index.html -->
-
-    <!-- Suzy: Move footer div outside of header div and place at bottom of page -->
-    <div class="footer">
-      <!-- Suzy: add copyright class to add css style for responsive layout -->
-      <div class="copyright">
-        <img
-          src="./assets/images/Gigs_LOGO.png"
-          alt="GIGS logo"
-          class="footer-logo"
-        />
-        &copy; 2023 GIGS. All rights reserved.
+          <form class="justify-content-end">
+            <div class="grid-item">
+              <div class="saved-link">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                <!-- Suzy: Change href attribute to target saved html file when saved link is clicked, Anna resolved the link  -->
+                <a href="saved.html">SAVED</a>
+              </div>
+            </div>
+          </form>
+        
+          <div class="grid-item">
+          <div class="weather">
+            <img id="weather-icon" />
+            <!-- Suzy: Add placeholder for temp -->
+            <p id="temp"></p>
+          </div>
+          </div>
+        </nav>
       </div>
-      <!-- Suzy: change class from support to contact -->
-      <div class="contact"><i class="fa fa-envelope"></i> Contact</div>
-      <div class="support">Support</div>
-    </div>
-</section>
+        <!-- Anna added toggle button for image switch -->
+        <section class="toggle">
+          <input type="checkbox" id="mode" />
+        </section>
+      </div>
+            <div class="grid-item">
+              <p id="1a" class="answer" style="font-size: 36px"></p>
+            </div>
+  
+            <!-- Suzy: Remove container-fluid class -->
+  
+  
+      <!-- Suzy: move search-results div and result-container outside header div -->
+
+      <!-- Anna styled css location of this div -->
+
+      <div class="search-results color">
+        <h2 id="searchResultsFor">Search Results for:</h2>
+
+        <!-- Aleena: Added the datepicker -->
+        <p><input id="calendar_filter" type="date" /></p>
+      </div>
+
+      <!-- Aleena: table for results/ hidden -->
+      <div
+        id="result-container"
+        class="table-container row justify-content-center mt-5"
+      >
+        <div id="first-column" class="col-lg-0 col-sm-12"></div>
+        <div id="second-column" class="col-lg-6 col-sm-6"></div>
+        <div id="third-column" class="col-lg-6 col-sm-6"></div>
+      </div>
+
+      <!-- Anna Added footer to match index.html -->
+
+      <!-- Suzy: Move footer div outside of header div and place at bottom of page -->
+      <div class="footer">
+        <!-- Suzy: add copyright class to add css style for responsive layout -->
+        <div class="copyright">
+          <img
+            src="./assets/images/Gigs_LOGO.png"
+            alt="GIGS logo"
+            class="footer-logo"
+          />
+          &copy; 2023 GIGS. All rights reserved.
+        </div>
+        <!-- Suzy: change class from support to contact -->
+        <div class="contact"><i class="fa fa-envelope"></i> Contact</div>
+        <div class="support">Support</div>
+      </div>
+    </section>
 
     <!-- Suzy: add jQuery link -->
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
