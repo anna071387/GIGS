@@ -27,6 +27,10 @@ For convenience a weather Api was used to show the active weather data for your 
 
 Safe travels! 
 
+The following animation demonstrates the application's appearance and functionality:
+
+![A user types in city name and clicks on search for events and selects a date from the calendar.](./assets/gigs_demo.gif)
+
 ## Result
 We developed a well-crafted, functioning, user friendly, intuitive website for searching local events per your searched city. 
 
