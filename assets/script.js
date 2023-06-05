@@ -28,7 +28,6 @@ searchButtonEl.addEventListener("click", function (event) {
     .then(function (data) {
       console.log(data);
     });
-    
 });
 
 // AnnaG: added a todays date that can be displayed at the navbar in the center
@@ -39,8 +38,3 @@ $(document).ready(function () {
   $("#1a").text(today.format("MMM D, YYYY"));
   console.log(today);
 });
-
-
-
-
-
