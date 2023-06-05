@@ -7,6 +7,10 @@
 ![alt text](./assets/images/SavedPageDark-01-01.jpg)
 
 
+https://github.com/anna071387/GIGS
+
+https://anna071387.github.io/GIGS/index.html
+
 ## Description
 The app Gigs is designed to make the search of events intuitive. 
 Imagine you are planning a weekend getaway and trying to figure out what events are happening in the area during your stay. 
