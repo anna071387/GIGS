@@ -1,48 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GIGS</title>
-  <!-- Suzy: Bootstrap CDN link -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Suzy: Font Awesome CDN link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-  <!-- Suzy: Font Awesome CDN link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Suzy: Add link for google font family: Montserrat -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <!-- rel='stylesheet' type='text/css'> -->
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>GIGS</title>
+    <!-- Suzy: Bootstrap CDN link -->
+  </head>
 
-  <!-- Suzy: Add link for google font family: Montserrat -->
-  <link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+  <body>
+    <section class="screen">
+      <!-- Suzy: Add placeholder image for background -->
+      <!-- <div class="background-img"> -->
+      <!-- Suzy: Add navbar with Gigs logo image and Saved link -->
+      <div id="header" class="grid-container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <!-- Suzy: Add <a> tag with href attribute so logo can be clicked to navigate to homepage  -->
+          <div class="grid-item">
+            <h1>
+              <a href="index.html"
+                ><img
+                  src="./assets/images/Gigs_LOGO.png"
+                  alt="GIGS logo"
+                  class="logo"
+              /></a>
+            </h1>
+          </div>
+          <div class="grid-item">
+            <p id="1a" class="answer" style="font-size: 36px"></p>
+          </div>
 
-  <link rel="stylesheet" href="./assets/style.css">
+          <!-- Suzy: Remove container-fluid class -->
 
-</head>
-
-<body>
-  <!-- Suzy: Add placeholder image for background -->
-  <div class="background-img">
-    <!-- Suzy: Add navbar with Gigs logo image and Saved link -->
-    <div id="header" class="container-fluid">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <h1><img src="./assets/images/Gigs_LOGO.png" alt="GIGS logo" class="logo"></h1>
-        <form class="container-fluid justify-content-end">
-            <div class="saved-link"><i class="fa fa-heart-o" aria-hidden="true"></i>
-              <a href="#">SAVED</a>
+          <form class="justify-content-end">
+            <div class="grid-item">
+              <div class="saved-link">
+                <i class="fa fa-heart heart fa-2x" aria-hidden="true"></i>
+                <!-- Suzy: Change href attribute to target saved html file when saved link is clicked, Anna resolved the link  -->
+                <a href="saved.html">SAVED</a>
+              </div>
             </div>
+          </form>
+        </nav>
+      </div>
+
+      <!-- Aleena: Added Search bar and button -->
+      <div id="search" class="row">
+        <form id="searchForm" class="col-lg-4 col-sm-12">
+          <input
+            id="cityInput"
+            type="search"
+            placeholder="enter city name"
+            aria-label="Search"
+          />
         </form>
-      </nav>
-    </div>
-  </div>
+        <button
+          id="searchButton"
+          class="btn btn-outline-light my-2 my-sm-0 col-1"
+          type="submit"
+        >
+          Search
+        </button>
+      </div>
 
-  <!-- Suzy: Add footer with Gigs logo, copyright, contact and support links -->
-  <div class="footer">
-      <div><img src="./assets/images/Gigs_LOGO.png" alt="GIGS logo" class="footer-logo"> &copy; 2023 GIGS. All rights reserved.</div>
-      <div><i class="fa fa-envelope"></i> Contact</div>
-      <div>Support</div>
-    </div> 
-  
+      <!-- Suzy: Add footer with Gigs logo, copyright, contact and support links -->
+      <div class="footer">
+        <div>
+          <img
+            src="./assets/images/Gigs_LOGO.png"
+            alt="GIGS logo"
+            class="footer-logo"
+          />
+          &copy; 2023 GIGS. All rights reserved.
+        </div>
+        <div class="contact"><i class="fa fa-envelope"></i> Contact</div>
+        <div class="support"><i class="fa fa-wrench"></i> Support</div>
+      </div>
+    </section>
 
-  <script src="./assets/script.js"></script>
-
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="./assets/script.js"></script>
+  </body>
 </html>
