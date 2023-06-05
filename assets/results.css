@@ -1,0 +1,272 @@
+:root {
+  --primary: #7a29fd;
+  --secondary: #707070;
+  --white: #f2ecfc;
+  --black: #000000;
+}
+
+html,
+.wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: var(--bg-light);
+  /* Suzy: add style to allow result content to display with footer at bottom of page */
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+  padding-bottom: 7rem;
+  box-sizing: inherit;
+  --text-light: #7a29fd;
+  --primary-dark: #7a29fd;
+  --bg-light: #538dfa;
+  --bg-btn: #7a29fd;
+}
+
+body.dark {
+  --text-light: #f2ecfc;
+  --primary-dark: #310579;
+  --bg-light: #310579;
+  --bg-btn: #7a29fd;
+}
+.screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.header {
+  margin: 0;
+}
+
+.heart {
+  color: #7a29fd;
+}
+
+/* Suzy: Add css for weather div to display icon and temp on top right */
+.weather {
+  position: absolute;
+  top: 40px; /* To align position with logo on navbar */
+  right: 40px;
+}
+.h4 {
+  color: #b3c1e9;
+}
+#temp {
+  display: block;
+  font-size: 20px;
+  color: #b3c1e9;
+  text-align: center;
+  transform: translate(1%, -70%); /* Suzy: To overlay text to weather icon */
+}
+.saved-link {
+  font-weight: 500px;
+  font-size: 20px;
+}
+
+/* Remove underline from link */
+.saved-link a {
+  text-decoration: none;
+}
+
+.search-results {
+  display: flex;
+  flex-direction: wrap;
+  /* padding: 25px; */
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.fa {
+  padding-left: 25px;
+}
+
+/* a {
+  color: var(--primary)
+} */
+
+/* Anna Added toggle and back button to index html 
+It will be closed at the end with note \Toggle see further */
+a {
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 7px;
+  padding: 10px 8px 16px 7px;
+}
+
+/* Suzy: Comment out to prevent highlighting of logo when clicked which is to replace need for back button? */
+/* a:hover {
+  background-color: #bf9bfa;
+  color: black;
+} */
+.square {
+  background: #7a29fd;
+  /* border-radius: 50%; */
+  color: #000000;
+  padding-top: 0px;
+  height: 34px;
+  gap: 5px;
+}
+.squeareColor {
+  background: #7a29fd;
+  color: #000000;
+}
+
+.toggle {
+  display: flex;
+  padding-left: 50px;
+}
+
+.box {
+  display: table-cell;
+  width: 50px;
+  height: 50px;
+  margin: 0 1px;
+  cursor: pointer;
+  border: 2px solid#7A29FD;
+}
+.clrdrk {
+  background-color: #7a29fd;
+}
+.clrlgt {
+  background-color: #b3c1e9;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 80px;
+  height: 40px;
+  border-radius: 50px;
+  outline: none;
+  background-image: url(https://i.postimg.cc/857jHw2q/Screenshot-2020-04-16-at-1-07-06-PM.png);
+  background-size: cover;
+  margin-bottom: 15px;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background-color: var(--primary-dark);
+  border-radius: 50px;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: translate(100%);
+}
+
+input[type="checkbox"]:checked {
+  background-image: url(https://i.postimg.cc/Hn0nstVK/Screenshot-2020-04-16-at-1-07-19-PM.png);
+}
+
+/* Suzy: add class contact */
+.contact,
+.support {
+  color: #f2ecfc;
+}
+.contact:hover,
+.support:hover {
+  color: #7a29fd;
+}
+
+.color {
+  color: #f2ecfc;
+}
+
+#events {
+  display: flex;
+  width: 100vw;
+}
+
+.firstrow {
+  width: 280px;
+  height: 210px;
+  color: #b3c1e9;
+}
+/* .secondrow {
+  max-width: fit-content;
+  height: 210px;
+  padding-top: 50px;
+  color: #b3c1e9;
+} */
+
+.info-row {
+  max-width: fit-content;
+  height: 210px;
+  color: #b3c1e9;
+}
+
+/* Anna matched footer with index.html */
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  background-color: black;
+  color: #f2ecfc;
+  column-gap: 50px;
+  /* Suzy: Add css to position footer to bottom of the page */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.footer-logo {
+  width: 100px;
+}
+/* footer ended */
+
+/* Suzy: Add styling for result container */
+#result-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 2vw;
+  margin-top: 50px;
+}
+
+/* Suzy: Add styling for event image container */
+#second-column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1vw;
+}
+
+/* Suzy: Add styling for event info container */
+#third-column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1vw;
+  width: fit-content;
+}
+
+/* Add media queries to make footer responsive in results page */
+@media screen and (max-width: 755px) {
+  .table-container {
+    padding-bottom: 5rem;
+  }
+  .footer {
+    width: 100vw;
+    display: grid;
+  }
+  .support {
+    margin-top: 2%;
+    /* padding-left: 7%; */
+    padding-bottom: 5%;
+  }
+}

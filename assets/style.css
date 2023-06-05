@@ -1,34 +1,164 @@
-body {
-    font-family: 'Montserrat', sans-serif;
+:root {
+  --primary: #7a29fd;
+  --secondary: #707070;
+  --white: #f2ecfc;
+  --black: #000000;
 }
 
-.background-img {
-    height: 100vh;
-    background-image: url(../assets/images/gigs_background.png);
-    background-size: cover;
+a {
+  color: var(--primary);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  margin: 0;
+}
+
+.screen {
+  /* display: flex; */
+  /* flex-direction:column; */
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  background: url(./images/DarkBGsmall-01.png);
+  background-size: cover;
+}
+
+/* #header {
+    margin: 0;
+    display: flex;
+    flex-direction: wrap;
+    width: 100vw;
+} */
+/* Override bootstrap css */
+/* .navbar-expand-lg {
+    margin-top: 0;
+    width: 100vw;
+} */
+
+.grid-container > div {
+  display: grid;
+  grid-template: auto auto auto;
+  padding: 10px;
+  grid-gap: 500px;
+}
+.grid-item {
+  padding: 25px;
+}
+.answer {
+  color: #f2ecfc;
+}
+
+.centerBtn {
+  display: flex;
+  width: 100px;
+}
+#cityInput {
+  position: fixed;
+  width: 30%;
+  top: 50%;
+  left: 35%;
+  margin-top: -50px;
+  background-color: white;
+}
+
+input {
+  float: left;
+  width: 100%;
+  padding-top: 5px;
+  border-radius: 0%;
+  border: none;
+}
+
+#searchButton {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .saved-link {
-    font-weight: 500px;
-    font-size: 20px;
+  font-weight: 500px;
+  font-size: 20px;
 }
 
 /* Remove underline from link */
 .saved-link a {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+#select {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contact,
+.support {
+  color: #f2ecfc;
+}
+
+.contact:hover,
+.support:hover {
+  color: #7a29fd;
+}
+
+.heart {
+  color: #7a29fd;
 }
 
 .footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    min-height: 50px;
-    background-color: black;
-    color: white;
-    column-gap: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  background-color: black;
+  color: #f2ecfc;
+  column-gap: 50px;
+  /* Suzy: Add css to position footer to bottom of the page */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-logo {
-    width: 100px;
+  width: 100px;
+}
+
+/* Results page placeholder */
+.saved-events {
+  margin-left: 3%;
+}
+
+@media screen and (max-width: 990px) {
+  #searchButton {
+    max-width: 100px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  #searchButton {
+    margin-left: 1px;
+  }
+}
+
+/* Add media queries to make footer responsive and match footer on results page */
+@media screen and (max-width: 755px) {
+  .footer {
+    width: 100vw;
+    display: grid;
+  }
+  .contact {
+    padding-left: 7%;
+  }
+  .support {
+    margin-top: 2%;
+    padding-left: 7%;
+    padding-bottom: 5%;
+  }
 }
