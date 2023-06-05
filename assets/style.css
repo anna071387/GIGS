@@ -105,6 +105,10 @@ input {
   color: #7a29fd;
 }
 
+.heart {
+  color: #7a29fd;
+}
+
 .footer {
   display: flex;
   flex-direction: row;

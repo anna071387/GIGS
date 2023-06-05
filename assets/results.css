@@ -48,6 +48,10 @@ body.dark {
   margin: 0;
 }
 
+.heart {
+  color:#7a29fd;
+}
+
 /* Suzy: Add css for weather div to display icon and temp on top right */
 .weather {
   position: absolute;
@@ -63,6 +67,15 @@ body.dark {
   color: #b3c1e9;
   text-align: center;
   transform: translate(1%, -70%); /* Suzy: To overlay text to weather icon */
+}
+.saved-link {
+  font-weight: 500px;
+  font-size: 20px;
+}
+
+/* Remove underline from link */
+.saved-link a {
+  text-decoration: none;
 }
 
 .search-results {
@@ -139,7 +152,8 @@ a {
   border-radius: 50px;
   outline: none;
   background-image: url(https://i.postimg.cc/857jHw2q/Screenshot-2020-04-16-at-1-07-06-PM.png);
-  background-size: cover; ;
+  background-size: cover; 
+  margin-bottom: 15px;
 }
 
 input[type="checkbox"]::before {
