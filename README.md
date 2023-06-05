@@ -1,8 +1,8 @@
 # GIGS
 
-![alt text](./assets/images/LandingPage.png)
-![alt text](./assets/images/Light-01.png)
-![alt text](./assets/images/Dark-01.png)
+![alt text](./assets/images/Large_LandingPage-01.jpg)
+![alt text](./assets/images/SearchResults-01.jpg)
+![alt text](./assets/images/SearchResultsDark-01-01.jpg)
 
 
 
@@ -12,7 +12,7 @@ Imagine you are planning a weekend getaway and trying to figure out what events 
 With Gigs, you are able to do it with ease.
 
 ## Use
-* Type in the city in the search bar.
+*   Type in the city in the search bar.
 *	Press the submit button.
 *	You will be redirected to the results page with the results to all the events in the area. 
 *	Click the calendar and get Gigs results for the date of your visit.
