@@ -38,8 +38,13 @@ function fetch_api() {
         console.log(data.events[i]);
         // url= data.events[i].url
         console.log(url);
+        var imgContainer = document.createElement("div");
+        var img = document.createElement("img");
+        img.setAttribute("src", `${data.events[i].performers[0].image}`);
+        secondColumnEl.appendChild(imgContainer);
+        imgContainer.append(img);
         var card = document.createElement("div");
-        card.className = "secondrow";
+        card.className = "info-row";
         var dtEl = document.createElement("h4");
         // Suzy: format date and time
         dtEl.textContent = dayjs(data.events[i].datetime_local).format(
@@ -51,13 +56,11 @@ function fetch_api() {
         venueEl.textContent = data.events[i].venue.name;
         var addressEl = document.createElement("p");
         addressEl.textContent = data.events[i].venue.extended_address;
-        secondColumnEl.appendChild(card);
+        // Suzy: add save button, need to add function to store/display saved event?
+        // var saveBtn = document.createElement("button");
+        // saveBtn.innerText = "Save Event";
+        thirdColumnEl.appendChild(card);
         card.append(dtEl, performerEl, venueEl, addressEl);
-        var imgContainer = document.createElement("div");
-        var img = document.createElement("img");
-        img.setAttribute("src", `${data.events[i].performers[0].image}`);
-        thirdColumnEl.appendChild(imgContainer);
-        imgContainer.append(img);
       }
       getWeather(cities);
     });
