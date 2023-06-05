@@ -34,6 +34,17 @@ function fetch_api() {
     .then(function (data) {
       console.log(data);
       searchResultsForEl.append(cities);
+
+    // Retrieve exsiting event history from local storage
+    var eventHistory = JSON.parse(localStorage.getItem("eventHistory")) || [];
+
+    // Store current event results in the event history
+    var eventResults = data.events;
+    eventHistory.push(eventResults);
+
+    // Save updated event history in local storage
+    localStorage.setItem("eventHistory", JSON.stringify(eventHistory));
+
       for (var i = 0; i < data.events.length; i++) {
         console.log(data.events[i]);
         // url= data.events[i].url
