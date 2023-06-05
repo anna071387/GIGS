@@ -1,8 +1,8 @@
 # GIGS
 
-![alt text](./assets/images/LandingPage.png)
-![alt text](./assets/images/Light-01.png)
-![alt text](./assets/images/Dark-01.png)
+![Image of Gigs landing page](./assets/images/gigs_landing_page.png)
+![Image of events by city and date in light mode](./assets/images/gigs_light.png)
+![Image of events by city and date in dark mode](./assets/images/gigs_dark.png)
 
 
 
