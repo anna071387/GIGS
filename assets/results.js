@@ -81,6 +81,9 @@ function getWeather(cities) {
       // Suzy: Add temp converted to fahrenheit to display under weather icon
       var tempF = ((data.main.temp - 273.15) * 1.8 + 32).toFixed(0); // Suzy: Change to 0 digits to appear after decimal point for temp in F
       console.log(tempF);
+      // Clear previous temp
+      tempEl.innerHTML = "";
+      // Display current temp
       tempEl.append(tempF + "F");
     });
 }
