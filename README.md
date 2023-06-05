@@ -1,9 +1,10 @@
 # GIGS
 
-![Image of Gigs landing page](./assets/images/gigs_landing_page.png)
-![Image of events by city and date in light mode](./assets/images/gigs_light.png)
-![Image of events by city and date in dark mode](./assets/images/gigs_dark.png)
-
+![alt text](./assets/images/Large_LandingPage-01.jpg)
+![alt text](./assets/images/SearchResults-01.jpg)
+![alt text](./assets/images/SearchResultsDark-01-01.jpg)
+![alt text](./assets/images/SavedPage-01.jpg)
+![alt text](./assets/images/SavedPageDark-01-01.jpg)
 
 
 ## Description
@@ -11,8 +12,15 @@ The app Gigs is designed to make the search of events intuitive.
 Imagine you are planning a weekend getaway and trying to figure out what events are happening in the area during your stay. 
 With Gigs, you are able to do it with ease.
 
+
+
+
+https://drive.google.com/file/d/143qsrUySnXwQL8AFiK9aflqWaR1lN8yq/view?usp=drive_link
+
+ 
+
 ## Use
-* Type in the city in the search bar.
+*   Type in the city in the search bar.
 *	Press the submit button.
 *	You will be redirected to the results page with the results to all the events in the area. 
 *	Click the calendar and get Gigs results for the date of your visit.
